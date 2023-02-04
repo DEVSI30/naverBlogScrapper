@@ -1,7 +1,11 @@
+import time
+
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+
+from bs4 import BeautifulSoup
 
 
 def get_driver():
@@ -24,8 +28,6 @@ def get_status(driver):
         return False
 
 
-# <a href="https://blog.naver.com/PostView.naver?blogId=ssunris&amp;logNo=221636240966&amp;categoryNo=46&amp;parentCategoryNo=0&amp;viewDate=&amp;currentPage=12&amp;postListTopCurrentPage=&amp;from=postList" class="pcol2 _setTop _setTopListUrl">17.정관(正官)의 분석과 정관격(正官格) (2)</a>
-# https://blog.naver.com/ssunris/221636240966
 class Crawler(object):
     def __init__(self):
         self.driver = None
@@ -59,4 +61,25 @@ class Crawler(object):
             return self.driver.find_element(By.CSS_SELECTOR, selector)
         except:
             return None
+
+
+def save_html_file():
+    file_name = "test"
+    with open(f"{file_name}.html", "w", encoding="utf-8") as f:
+        f.write('<!DOCTYPE html>' + "\n")
+        f.write('<html lang="en">' + "\n")
+        f.write('<head>' + "\n")
+        f.write('    <meta charset="UTF-8">' + "\n")
+        f.write('    <meta http-equiv="X-UA-Compatible" content="IE=edge">' + "\n")
+        f.write('    <meta name="viewport" content="width=device-width, initial-scale=1.0">' + "\n")
+        f.write(f'    <title>{file_name}</title>' + "\n")
+        f.write('</head>' + "\n")
+        f.write('<body>' + "\n")
+        f.write('</body>' + "\n")
+        f.write('</html>' + "\n")
+
+if __name__ == '__main__':
+    save_html_file()
+
+
 
