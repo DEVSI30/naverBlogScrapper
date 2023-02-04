@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>510</width>
-    <height>589</height>
+    <height>567</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -86,8 +86,8 @@
    <widget class="QCheckBox" name="chkImgContainYn">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>60</y>
+      <x>13</x>
+      <y>61</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -99,8 +99,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>60</y>
+      <x>111</x>
+      <y>61</y>
       <width>51</width>
       <height>16</height>
      </rect>
@@ -112,8 +112,8 @@
    <widget class="QPlainTextEdit" name="txtWaitTime">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>55</y>
+      <x>167</x>
+      <y>58</y>
       <width>91</width>
       <height>21</height>
      </rect>
@@ -129,7 +129,7 @@
     <property name="geometry">
      <rect>
       <x>11</x>
-      <y>27</y>
+      <y>33</y>
       <width>51</width>
       <height>16</height>
      </rect>
@@ -141,8 +141,8 @@
    <widget class="QPlainTextEdit" name="txtSaveDirectory">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>20</y>
+      <x>67</x>
+      <y>28</y>
       <width>361</width>
       <height>21</height>
      </rect>
@@ -157,14 +157,40 @@
    <widget class="QPushButton" name="btnChangeDirectory">
     <property name="geometry">
      <rect>
-      <x>437</x>
-      <y>20</y>
+      <x>434</x>
+      <y>27</y>
       <width>51</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
      <string>변경</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveBtn">
+    <property name="geometry">
+     <rect>
+      <x>392</x>
+      <y>58</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>옵션 저장</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>24</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>옵션</string>
     </property>
    </widget>
   </widget>
@@ -213,24 +239,11 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>410</y>
-     <width>24</width>
-     <height>12</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>옵션</string>
-   </property>
-  </widget>
   <widget class="QProgressBar" name="progressBar">
    <property name="geometry">
     <rect>
-     <x>7</x>
-     <y>560</y>
+     <x>0</x>
+     <y>530</y>
      <width>501</width>
      <height>23</height>
     </rect>
@@ -265,17 +278,30 @@
     <string>▼ 카테고리 추출</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="saveBtn">
+  <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>530</y>
-     <width>91</width>
-     <height>23</height>
+     <x>10</x>
+     <y>409</y>
+     <width>56</width>
+     <height>12</height>
     </rect>
    </property>
    <property name="text">
-    <string>저장</string>
+    <string>진행상태 :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>407</y>
+     <width>401</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>프로그램 구동</string>
    </property>
   </widget>
  </widget>

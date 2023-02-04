@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 
 def get_driver():
@@ -43,4 +44,19 @@ class Crawler(object):
 
     def switch_to_frame(self, frame_name):
         self.driver.switch_to.frame(frame_name)
+
+    def find_element_by_id(self, id):
+        return self.driver.find_element(By.ID, id)
+
+    def find_element_by_xpath(self, xpath):
+        try:
+            return self.driver.find_element(By.XPATH, xpath)
+        except:
+            return None
+
+    def find_element_by_selector(self, selector):
+        try:
+            return self.driver.find_element(By.CSS_SELECTOR, selector)
+        except:
+            return None
 
