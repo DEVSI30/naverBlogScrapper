@@ -38,3 +38,9 @@ class Crawler(object):
 
         self.driver.get(url)
 
+    def get_source(self):
+        return self.driver.page_source
+
+    def switch_to_frame(self, frame_name):
+        self.driver.switch_to.frame(frame_name)
+
